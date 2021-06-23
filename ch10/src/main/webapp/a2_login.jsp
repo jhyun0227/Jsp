@@ -1,0 +1,32 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" import="ch10.*"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<%
+	String id = request.getParameter("id");
+	String password = request.getParameter("password");
+	
+	MemberDao md = MemberDao.getInstance();
+	int result = md.loginChk(id, password);
+	if (result > 0) {
+		session.setAttribute("id", id);
+		/* session.setMaxInactiveInterval(60*60); 1시간 지나면 세션 삭제 */
+		response.sendRedirect("a3_main.jsp");
+	} else if (result == 0) { %>
+		<script type="text/javascript">
+			alert("암호가 틀렸습니다.");
+			history.go(-1);
+		</script>
+<%	} else { %>
+		<script type="text/javascript">
+			alert("없는 ID입니다.");
+			history.go(-1);
+		</script>
+<%	} %>
+</body>
+</html>

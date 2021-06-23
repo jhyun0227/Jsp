@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('#sub').click(function() {
+/* 			var id = $('#id').val();
+			var pass = $('#pass').val();
+			var sendData = "id="+id+'&pass='+pass; */
+			var sendData = $('form').
+();
+			$.ajaxSetup({
+				url:'logChk.jsp',type:'post',dataType:'text',
+				success: function(msg) {
+					$('#message').html(msg);
+				}
+			});
+			$.ajax({ data:sendData } );
+			return false;
+		});
+	});
+</script></head><body>
+<form action="">
+	아이디 : <input type="text" name="id" id="id"><p>
+	암호 : <input type="password" name="pass" id="pass"><p>
+	<input type="submit" value="확인" id="sub" >
+</form>
+<div id="message"></div>
+</body>
+</html>

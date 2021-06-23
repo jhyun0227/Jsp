@@ -1,0 +1,23 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+	button { margin: 20px; }
+	div { border: 2px solid green; 	float: left; margin: 10px; 
+	}
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('#menu1').click(function() {
+			$('#list1').load('menu.html');
+		});
+		$('#menu2').click(function() {
+			$('#list2').load('menu.html li');
+		});
+	});
+</script></head><body>
+<button id="menu1">메뉴 1</button><button id="menu2">메뉴2</button><br>
+<div id="list1"></div><div id="list2"></div>
+</body>
+</html>

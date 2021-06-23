@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type = "text/css">
+	@import url("common.css");
+</style>
+</head>
+<body>
+	<form action = "Movie" method = "post">
+		<table>
+			<caption>좋아하는 영화</caption>
+			<tr>
+				<th>영화 제목</th>
+				<td>
+					<label for="batman">배트맨</label>
+					<input type="checkbox" name="movie" value="배트맨" id="batman" checked="checked"><br>
+					<label for="ironman">아이언맨</label>
+					<input type="checkbox" name="movie" value="아이언맨" id="ironman"><br>
+					<label for="superman">슈퍼맨</label>
+					<input type="checkbox" name="movie" value="슈퍼맨" id="superman"><br>
+					<label for="antman">앤트맨</label>
+					<input type="checkbox" name="movie" value="앤트맨" id="antman"><br>
+					<label for="spiderman">스파이더맨</label>
+					<input type="checkbox" name="movie" value="스파이더맨" id="spiderman"><br>			
+				</td>
+			</tr>
+			<tr>
+				<th colspan="2"><input type="submit" value="확인"></th>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

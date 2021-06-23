@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+caption {
+	font-size: 20px;
+	line-heigth: 160%;
+	font-weigth: bold;
+}
+
+body {
+	background-color: #0080ff;
+}
+
+table {
+	background-color: aqua;
+	width: 100%;
+	border: 1px sold #ffff00;
+}
+
+th {
+	background-color: #80ff00;
+	color: black;
+}
+
+th, td {
+	padding: 10px;
+	border: 1px solid red;
+}
+
+tr:hover {
+	background-color: green;
+	color: white;
+}
+
+#err {
+	color: #00ffff;
+	font-weight: bold;
+}
